@@ -64,6 +64,7 @@ func DoUpgrade(helper *up.Helper) {
 		helper.Copy(up.Bool, "bridge", "message_status_events")
 	}
 	helper.Copy(up.Bool, "bridge", "send_error_notices")
+	helper.Copy(up.Bool, "bridge", "suppress_success_status_events")
 	helper.Copy(up.Int, "bridge", "max_handle_seconds")
 	helper.Copy(up.Str|up.Null, "bridge", "device_id")
 	helper.Copy(up.Bool, "bridge", "sync_direct_chat_list")
