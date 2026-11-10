@@ -124,6 +124,9 @@ bridge:
     # Whether or not the bridge should send the message status as a custom
     # com.beeper.message_send_status event.
     message_status_events: true
+    # Avoid noisy successful status events while retaining failure status events.
+    # Some clients use the success events to show delivery state.
+    suppress_success_status_events: false
     # Whether or not the bridge should send error notices via m.notice events
     # when a message fails to bridge.
     send_error_notices: true

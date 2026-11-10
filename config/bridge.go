@@ -41,9 +41,10 @@ type BridgeConfig struct {
 
 	PersonalFilteringSpaces bool `yaml:"personal_filtering_spaces"`
 
-	DeliveryReceipts    bool `yaml:"delivery_receipts"`
-	MessageStatusEvents bool `yaml:"message_status_events"`
-	SendErrorNotices    bool `yaml:"send_error_notices"`
+	DeliveryReceipts            bool `yaml:"delivery_receipts"`
+	MessageStatusEvents         bool `yaml:"message_status_events"`
+	SuppressSuccessStatusEvents bool `yaml:"suppress_success_status_events"`
+	SendErrorNotices            bool `yaml:"send_error_notices"`
 
 	MaxHandleSeconds int    `yaml:"max_handle_seconds"`
 	DeviceID         string `yaml:"device_id"`

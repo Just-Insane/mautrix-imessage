@@ -1113,7 +1113,7 @@ func (portal *Portal) sendSuccessCheckpoint(eventID id.EventID, service, handle 
 }
 
 func (portal *Portal) sendSuccessMessageStatus(eventID id.EventID, service, handle string, deliveredTo []id.UserID) {
-	if !portal.bridge.Config.Bridge.MessageStatusEvents {
+	if !portal.bridge.Config.Bridge.MessageStatusEvents || portal.bridge.Config.Bridge.SuppressSuccessStatusEvents {
 		return
 	}
 
